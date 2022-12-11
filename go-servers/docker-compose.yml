@@ -1,0 +1,11 @@
+services:
+  attacker:
+    image: attacker:latest
+    environment:
+      - VICTIM_URL=victim:8080
+    ports:
+      - 8080:8081
+  victim:
+    image: victim:latest
+    ports:
+      - 8080
